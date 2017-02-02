@@ -60,7 +60,7 @@ GLuint	index,		//Index to draw
 //const string filename = "texture.tga";
 //const string filename = "cube.tga";
 
-const string filename = "minecraft.tga";
+const string filename = "texture.tga";
 
 int width; //width of texture
 int height; //height of texture
@@ -339,39 +339,145 @@ void Game::update()
 			rotationAngle -= 360.0f;
 		}
 	}
+	if (sf::Keyboard::isKeyPressed(Keyboard::Left))
+	{
+		vertex[0].coordinate[0] += -0.0001f;
+		vertex[0].coordinate[1] += -0.0000f;
+		vertex[0].coordinate[2] += -0.0000f;
 
+		vertex[1].coordinate[0] += -0.0001f;
+		vertex[1].coordinate[1] += -0.0000f;
+		vertex[1].coordinate[2] += -0.0000f;
+
+		vertex[2].coordinate[0] += -0.0001f;
+		vertex[2].coordinate[1] += -0.0000f;
+		vertex[2].coordinate[2] += -0.0000f;
+
+		vertex[3].coordinate[0] += -0.0001f;
+		vertex[3].coordinate[1] += -0.0000f;
+		vertex[3].coordinate[2] += -0.0000f;
+
+		vertex[4].coordinate[0] += -0.0001f;
+		vertex[4].coordinate[1] += -0.0000f;
+		vertex[4].coordinate[2] += -0.0000f;
+
+		vertex[5].coordinate[0] += -0.0001f;
+		vertex[5].coordinate[1] += -0.0000f;
+		vertex[5].coordinate[2] += -0.0000f;
+
+		vertex[6].coordinate[0] += -0.0001f;
+		vertex[6].coordinate[1] += -0.0000f;
+		vertex[6].coordinate[2] += -0.0000f;
+
+		vertex[7].coordinate[0] += -0.0001f;
+		vertex[7].coordinate[1] += -0.0000f;
+		vertex[7].coordinate[2] += -0.0000f;
+	}
 	//Change vertex data
-	/*vertex[0].coordinate[0] += -0.0001f;
-	vertex[0].coordinate[1] += -0.0000f;
-	vertex[0].coordinate[2] += -0.0000f;
+	if (sf::Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		vertex[0].coordinate[0] += 0.0001f;
+		vertex[0].coordinate[1] += -0.0000f;
+		vertex[0].coordinate[2] += -0.0000f;
 
-	vertex[1].coordinate[0] += -0.0001f;
-	vertex[1].coordinate[1] += -0.0000f;
-	vertex[1].coordinate[2] += -0.0000f;
+		vertex[1].coordinate[0] += 0.0001f;
+		vertex[1].coordinate[1] += -0.0000f;
+		vertex[1].coordinate[2] += -0.0000f;
 
-	vertex[2].coordinate[0] += -0.0001f;
-	vertex[2].coordinate[1] += -0.0000f;
-	vertex[2].coordinate[2] += -0.0000f;
+		vertex[2].coordinate[0] += 0.0001f;
+		vertex[2].coordinate[1] += -0.0000f;
+		vertex[2].coordinate[2] += -0.0000f;
 
-	vertex[3].coordinate[0] += -0.0001f;
-	vertex[3].coordinate[1] += -0.0000f;
-	vertex[3].coordinate[2] += -0.0000f;
+		vertex[3].coordinate[0] += 0.0001f;
+		vertex[3].coordinate[1] += -0.0000f;
+		vertex[3].coordinate[2] += -0.0000f;
 
-	vertex[4].coordinate[0] += -0.0001f;
-	vertex[4].coordinate[1] += -0.0000f;
-	vertex[4].coordinate[2] += -0.0000f;
+		vertex[4].coordinate[0] += 0.0001f;
+		vertex[4].coordinate[1] += -0.0000f;
+		vertex[4].coordinate[2] += -0.0000f;
 
-	vertex[5].coordinate[0] += -0.0001f;
-	vertex[5].coordinate[1] += -0.0000f;
-	vertex[5].coordinate[2] += -0.0000f;
+		vertex[5].coordinate[0] += 0.0001f;
+		vertex[5].coordinate[1] += -0.0000f;
+		vertex[5].coordinate[2] += -0.0000f;
 
-	vertex[6].coordinate[0] += -0.0001f;
-	vertex[6].coordinate[1] += -0.0000f;
-	vertex[6].coordinate[2] += -0.0000f;
+		vertex[6].coordinate[0] += 0.0001f;
+		vertex[6].coordinate[1] += -0.0000f;
+		vertex[6].coordinate[2] += -0.0000f;
 
-	vertex[7].coordinate[0] += -0.0001f;
-	vertex[7].coordinate[1] += -0.0000f;
-	vertex[7].coordinate[2] += -0.0000f;*/
+		vertex[7].coordinate[0] += 0.0001f;
+		vertex[7].coordinate[1] += -0.0000f;
+		vertex[7].coordinate[2] += -0.0000f;
+	}
+
+	if (sf::Keyboard::isKeyPressed(Keyboard::Down))
+	{
+		vertex[0].coordinate[0] += 0.0000f;
+		vertex[0].coordinate[1] += -0.0001f;
+		vertex[0].coordinate[2] += -0.0000f;
+
+		vertex[1].coordinate[0] += 0.0000f;
+		vertex[1].coordinate[1] += -0.0001f;
+		vertex[1].coordinate[2] += -0.0000f;
+
+		vertex[2].coordinate[0] += 0.0000f;
+		vertex[2].coordinate[1] += -0.0001f;
+		vertex[2].coordinate[2] += -0.0000f;
+
+		vertex[3].coordinate[0] += 0.0000f;
+		vertex[3].coordinate[1] += -0.0001f;
+		vertex[3].coordinate[2] += -0.0000f;
+
+		vertex[4].coordinate[0] += 0.0000f;
+		vertex[4].coordinate[1] += -0.0001f;
+		vertex[4].coordinate[2] += -0.0000f;
+
+		vertex[5].coordinate[0] += 0.0000f;
+		vertex[5].coordinate[1] += -0.0001f;
+		vertex[5].coordinate[2] += -0.0000f;
+
+		vertex[6].coordinate[0] += 0.0000f;
+		vertex[6].coordinate[1] += -0.0001f;
+		vertex[6].coordinate[2] += -0.0000f;
+
+		vertex[7].coordinate[0] += 0.0000f;
+		vertex[7].coordinate[1] += -0.0001f;
+		vertex[7].coordinate[2] += -0.0000f;
+	}
+
+	if (sf::Keyboard::isKeyPressed(Keyboard::Up))
+	{
+		vertex[0].coordinate[0] += 0.0000f;
+		vertex[0].coordinate[1] += 0.0001f;
+		vertex[0].coordinate[2] += -0.0000f;
+
+		vertex[1].coordinate[0] += 0.0000f;
+		vertex[1].coordinate[1] += 0.0001f;
+		vertex[1].coordinate[2] += -0.0000f;
+
+		vertex[2].coordinate[0] += 0.0000f;
+		vertex[2].coordinate[1] += 0.0001f;
+		vertex[2].coordinate[2] += -0.0000f;
+
+		vertex[3].coordinate[0] += 0.0000f;
+		vertex[3].coordinate[1] += 0.0001f;
+		vertex[3].coordinate[2] += -0.0000f;
+
+		vertex[4].coordinate[0] += 0.0000f;
+		vertex[4].coordinate[1] += 0.0001f;
+		vertex[4].coordinate[2] += -0.0000f;
+
+		vertex[5].coordinate[0] += 0.0000f;
+		vertex[5].coordinate[1] += 0.0001f;
+		vertex[5].coordinate[2] += -0.0000f;
+
+		vertex[6].coordinate[0] += 0.0000f;
+		vertex[6].coordinate[1] += 0.0001f;
+		vertex[6].coordinate[2] += -0.0000f;
+
+		vertex[7].coordinate[0] += 0.0000f;
+		vertex[7].coordinate[1] += 0.0001f;
+		vertex[7].coordinate[2] += -0.0000f;
+	}
 
 #if (DEBUG >= 2)
 	DEBUG_MSG("Update up...");
@@ -406,9 +512,12 @@ void Game::render()
 
 	// Set pointers for each parameter
 	// https://www.opengl.org/sdk/docs/man4/html/glVertexAttribPointer.xhtml
-	glVertexAttribPointer(positionID, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	glVertexAttribPointer(positionID, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+	glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+	glVertexAttribPointer(texelID, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0);
+	/*glVertexAttribPointer(positionID, 3, GL_FLOAT, GL_FALSE, 0, 0);
 	glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, 0, 0);
-	glVertexAttribPointer(texelID, 2, GL_FLOAT, GL_FALSE, 0, 0);
+	glVertexAttribPointer(texelID, 2, GL_FLOAT, GL_FALSE, 0, 0);*/
 
 	//Enable Arrays
 	glEnableVertexAttribArray(positionID);
